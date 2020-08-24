@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Tela Inicial"
+             x:Class="Aula11_AppGuiaDev.Views.Inicial">
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="textoTec" TargetType="Label">
+                <Setter Property="FontSize" Value="Medium" />
+                <Setter Property="TextColor" Value="Accent" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" 
+                     HorizontalOptions="CenterAndExpand"
+                     Padding="10">
+            
+            <Label Text="Bem-vindo ao AppGuiaDev!"
+                   FontAttributes="Bold"                   
+                   FontSize="Title" />
+
+            <Label Text="O objetivo deste projeto é elencar categorias indispensáveis para desenvolvedores."
+                   FontSize="Large" />
+
+            <Label FontSize="Medium">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Separamos o conhecimento em 5 grandes áreas para você se tornar um desenvolvedor FullStack (de verdade): " />
+                        <Span Text="Banco de Dados" Style="{StaticResource textoTec}" />
+                        <Span Text=", " />
+                        <Span Text="Programação Web" Style="{StaticResource textoTec}" />
+                        <Span Text=", " />
+                        <Span Text="Programação Mobile" Style="{StaticResource textoTec}" />
+                        <Span Text=", " />
+                        <Span Text="Sistemas Operacionais " Style="{StaticResource textoTec}" />
+                        <Span Text="e " />
+                        <Span Text="Redes de Computadores " Style="{StaticResource textoTec}" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

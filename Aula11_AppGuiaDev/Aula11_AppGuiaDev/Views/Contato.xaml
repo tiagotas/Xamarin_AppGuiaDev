@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Informações de Contato"
+             x:Class="Aula11_AppGuiaDev.Views.Contato">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            
+            <Style x:Key="texto_centralizado" TargetType="Label">
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+            </Style>
+            
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Label Style="{StaticResource texto_centralizado}"
+                   Margin="0, 20, 0, 0">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="FATEC MOCOCA"
+                              FontAttributes="Bold"
+                              FontSize="Title" />
+                        <Span Text=" Centro Paula Souza" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label Text="ENDEREÇO:"
+                   FontAttributes="Bold"
+                   Margin="0, 20, 0, 0"
+                   Style="{StaticResource texto_centralizado}" />
+
+            <Label Text="Av. Dr. Américo Pereira Lima s/n"
+                   Style="{StaticResource texto_centralizado}" />
+
+            <Label Text="Jd. Lavínia - Mococa (SP)"
+                   Style="{StaticResource texto_centralizado}" />
+
+            <StackLayout Spacing="10"
+                         Padding="10"
+                         Margin="10">            
+                <Button Text="(19) 3656-5559" 
+                        Style="{StaticResource BotaoVermelho}"
+                        Clicked="fone_Clicked" />
+
+                <Button Text="Enviar E-Mail" 
+                        Style="{StaticResource BotaoEscuro}"
+                        Clicked="email_Clicked" />
+
+                <Button Text="Chamar no WhatsApp" 
+                        Style="{StaticResource BotaoVermelho}"
+                        Clicked="whatsapp_Clicked" />
+            </StackLayout>
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

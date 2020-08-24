@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="App"     
+             x:Class="Aula11_AppGuiaDev.MainPage">
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu">
+            <Grid BackgroundColor="#3E474C">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Frame Grid.Row="0"
+                       CornerRadius="10"
+                       BackgroundColor="#EA131F" 
+                       Margin="10, 0, 10, 0">
+                    
+                    <StackLayout>
+                        
+                        <Image Source="logo" Aspect="AspectFit" />
+                        <Label Text="www.tiago.blog.br"
+                           HorizontalTextAlignment="Center"
+                           FontSize="Medium"
+                           TextColor="White"
+                           Padding="5"/>
+                    </StackLayout>
+                    
+                </Frame>
+
+                <Frame CornerRadius="10"
+                       BackgroundColor="#F3F2F0"
+                       Grid.Row="1"
+                       Margin="10">
+                    
+                    <StackLayout Spacing="10">
+                        
+                        <Button Text="Inicial" 
+                            Style="{StaticResource BotaoVermelho}"
+                            Clicked="Button_Clicked_5" />
+
+                        <Button Text="Banco de Dados"
+                            Style="{StaticResource BotaoEscuro}"
+                            Clicked="Button_Clicked_1" />
+
+                        <Button Text="Programação Web" 
+                            Style="{StaticResource BotaoEscuro}"
+                            Clicked="Button_Clicked_2" />
+
+                        <Button Text="Programação Mobile" 
+                            Style="{StaticResource BotaoEscuro}"
+                            Clicked="Button_Clicked_3" />
+
+                        <Button Text="Sistemas Operacionais" 
+                            Style="{StaticResource BotaoEscuro}"
+                            Clicked="btn_so_Clicked" />
+
+                        <Button Text="Redes de Computadores" 
+                            Style="{StaticResource BotaoEscuro}"
+                            Clicked="Button_Clicked_4" />
+
+                        <Button Text="Contato Fatec" 
+                            Style="{StaticResource BotaoVermelho}"
+                            Clicked="Button_Clicked" />
+
+                    </StackLayout>
+                </Frame>
+
+
+            </Grid>
+        </ContentPage>        
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <NavigationPage>
+
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>
